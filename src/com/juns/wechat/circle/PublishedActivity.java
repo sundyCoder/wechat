@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
-import com.juns.wechat.view.activity.AlbumActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -316,5 +315,4 @@ public class PublishedActivity extends Activity {
 			break;
 		}
 	}
-
 }

@@ -51,7 +51,7 @@ public class AlbumActivity extends BaseActivity implements OnClickListener {
 		layout_head = getLayoutInflater().inflate(R.layout.layout_album_header,
 				null);
 		mlistview.addHeaderView(layout_head);
-		mlistview.setAdapter(new AlbumAdpter(this));
+		mlistview.setAdapter(new AlbumAdpter(this)); //静态的显示朋友圈的内容
 	}
 
 	@Override
@@ -88,11 +88,11 @@ public class AlbumActivity extends BaseActivity implements OnClickListener {
 			break;
 		case R.id.img_right:
 //			Utils.start_Activity(this, ShareActivity.class);
+//			Utils.start_Activity(this, TestPicActivity.class);
 			Utils.start_Activity(this, PublishedActivity.class);
 			break;
 		default:
 			break;
 		}
 	}
-
 }
