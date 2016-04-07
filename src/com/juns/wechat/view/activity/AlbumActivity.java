@@ -88,7 +88,6 @@ public class AlbumActivity extends BaseActivity implements OnClickListener {
 			break;
 		case R.id.img_right:
 //			Utils.start_Activity(this, ShareActivity.class);
-//			Utils.start_Activity(this, TestPicActivity.class);
 			Utils.start_Activity(this, PublishedActivity.class);
 			break;
 		default:

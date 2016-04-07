@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
+import com.juns.wechat.view.activity.AlbumActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -90,14 +91,15 @@ public class PublishedActivity extends Activity {
 				FileUtils.deleteDir();
 			}
 		});
-		
 		activity_cancel_send = (TextView) findViewById(R.id.cancel_send);
 		activity_cancel_send.setOnClickListener(new OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Utils.finish(PublishedActivity.this);
 			}
+		
 		});
 	}
 
@@ -279,7 +281,6 @@ public class PublishedActivity extends Activity {
 					Intent intent = new Intent(PublishedActivity.this,
 							TestPicActivity.class);
 					startActivity(intent);
-//					Utils.start_Activity(PublishedActivity.this, TestPicActivity.class);
 					dismiss();
 				}
 			});
