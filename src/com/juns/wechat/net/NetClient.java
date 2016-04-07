@@ -15,16 +15,19 @@ import com.juns.wechat.Constants;
 import com.juns.wechat.R;
 import com.juns.wechat.common.NetUtil;
 import com.juns.wechat.common.Utils;
-import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.DiskCache;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
+//import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
+//import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 public class NetClient {
 
@@ -95,7 +98,7 @@ public class NetClient {
 				.denyCacheImageMultipleSizesInMemory()
 				.memoryCache(new LruMemoryCache(cacheSize))
 				.memoryCacheSize(cacheSize)
-				.discCache(new UnlimitedDiscCache(cacheDir))
+				.discCache((DiskCache) new UnlimitedDiskCache(cacheDir)) //sundy
 				.discCacheSize(30 * 1024 * 1024).discCacheFileCount(500)
 				.writeDebugLogs().build();
 		mImageLoader = ImageLoader.getInstance();
@@ -127,7 +130,7 @@ public class NetClient {
 	}
 
 	public static void getBinnerBitmap(String url, ImageLoadingListener listener) {
-		mImageLoader.loadImage(url, listener);
+		mImageLoader.loadImage(url, (com.nostra13.universalimageloader.core.listener.ImageLoadingListener) listener); //sundy
 	}
 
 	/**
@@ -138,7 +141,7 @@ public class NetClient {
 	 */
 	public static void getHalfHeightBitmap(ImageView imageView, String uri,
 			ImageLoadingListener lister) {
-		mImageLoader.displayImage(uri, imageView, binner_options, lister);
+		mImageLoader.displayImage(uri, imageView, binner_options, (com.nostra13.universalimageloader.core.listener.ImageLoadingListener) lister); //sundy
 	}
 
 	/**
