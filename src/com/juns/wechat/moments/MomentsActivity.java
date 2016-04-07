@@ -43,9 +43,9 @@ import java.util.List;
 * @date 2015-12-28 下午4:21:18 
 *
  */
-public class MainActivity extends Activity implements OnRefreshListener, ICircleView{
+public class MomentsActivity extends Activity implements OnRefreshListener, ICircleView{
 
-	protected static final String TAG = MainActivity.class.getSimpleName();
+	protected static final String TAG = MomentsActivity.class.getSimpleName();
 	private ListView mCircleLv;
 	private SwipeRefreshLayout mSwipeRefreshLayout;
 	private CircleAdapter mAdapter;
@@ -106,7 +106,7 @@ public class MainActivity extends Activity implements OnRefreshListener, ICircle
 					//发布评论
 					String content = mEditText.getText().toString().trim();
 					if(TextUtils.isEmpty(content)){
-						Toast.makeText(MainActivity.this, "评论内容不能为空...", Toast.LENGTH_SHORT).show();
+						Toast.makeText(MomentsActivity.this, "评论内容不能为空...", Toast.LENGTH_SHORT).show();
 						return;
 					}
 					mPresenter.addComment(content, mCommentConfig);

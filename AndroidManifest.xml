@@ -171,6 +171,17 @@
             android:name=".circle.PhotoActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+        
+        <activity
+            android:name=".moments.MomentsActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".moments.ImagePagerActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
           
           <!-- 环信开始 -->
           <activity

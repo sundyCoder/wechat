@@ -14,7 +14,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.juns.wechat.MainActivity;
 import com.juns.wechat.R;
+import com.juns.wechat.circle.PublishedActivity;
 import com.juns.wechat.common.Utils;
 import com.juns.wechat.view.BaseActivity;
 
@@ -114,6 +116,7 @@ public class ShareActivity extends BaseActivity implements OnClickListener {
 			Utils.finish(ShareActivity.this);
 			break;
 		case R.id.txt_right:
+//			Utils.start_Activity(this, MainActivity.class);
 			break;
 		default:
 			break;

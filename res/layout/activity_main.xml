@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.juns.wechat.moments.MainActivity" >
+    tools:context="com.juns.wechat.moments.MomentsActivity" >
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/mRefreshLayout"
