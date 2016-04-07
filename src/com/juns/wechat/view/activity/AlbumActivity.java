@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.juns.wechat.R;
 import com.juns.wechat.adpter.AlbumAdpter;
+import com.juns.wechat.circle.PublishedActivity;
+import com.juns.wechat.circle.TestPicActivity;
 import com.juns.wechat.common.Utils;
 import com.juns.wechat.view.BaseActivity;
 
@@ -85,7 +87,9 @@ public class AlbumActivity extends BaseActivity implements OnClickListener {
 			Utils.finish(AlbumActivity.this);
 			break;
 		case R.id.img_right:
-			Utils.start_Activity(this, ShareActivity.class);
+//			Utils.start_Activity(this, ShareActivity.class);
+//			Utils.start_Activity(this, TestPicActivity.class);
+			Utils.start_Activity(this, PublishedActivity.class);
 			break;
 		default:
 			break;

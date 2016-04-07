@@ -1,13 +1,16 @@
 package com.juns.wechat.view.activity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 

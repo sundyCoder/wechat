@@ -1,4 +1,4 @@
-package com.chen.friends.circle;
+package com.juns.wechat.circle;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.juns.wechat.R;
+import com.juns.wechat.common.Utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -39,11 +40,12 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class PublishImages extends Activity {
+public class PublishedActivity extends Activity {
 
 	private GridView noScrollgridview;
 	private GridAdapter adapter;
 	private TextView activity_selectimg_send;
+	private TextView activity_cancel_send;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,9 +64,9 @@ public class PublishImages extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				if (arg2 == Bimp.bmp.size()) {
-					new PopupWindows(PublishImages.this, noScrollgridview);
+					new PopupWindows(PublishedActivity.this, noScrollgridview);
 				} else {
-					Intent intent = new Intent(PublishImages.this,
+					Intent intent = new Intent(PublishedActivity.this,
 							PhotoActivity.class);
 					intent.putExtra("ID", arg2);
 					startActivity(intent);
@@ -86,6 +88,15 @@ public class PublishImages extends Activity {
 				// 高清的压缩过的 bmp 对象  都在 Bimp.bmp里面
 				// 完成上传服务器后 .........
 				FileUtils.deleteDir();
+			}
+		});
+		
+		activity_cancel_send = (TextView) findViewById(R.id.cancel_send);
+		activity_cancel_send.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Utils.finish(PublishedActivity.this);
 			}
 		});
 	}
@@ -265,9 +276,10 @@ public class PublishImages extends Activity {
 			});
 			bt2.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
-					Intent intent = new Intent(PublishImages.this,
+					Intent intent = new Intent(PublishedActivity.this,
 							TestPicActivity.class);
 					startActivity(intent);
+//					Utils.start_Activity(PublishedActivity.this, TestPicActivity.class);
 					dismiss();
 				}
 			});

@@ -1,4 +1,4 @@
-package com.chen.friends.circle;
+package com.juns.wechat.circle;
 
 import java.util.ArrayList;
 import java.util.HashMap;

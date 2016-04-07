@@ -1,8 +1,7 @@
-package com.chen.friends.circle;
+package com.juns.wechat.circle;
 
 import java.io.Serializable;
 import java.util.List;
-
 import com.juns.wechat.R;
 
 import android.app.Activity;
@@ -15,7 +14,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-public class TestPicActivity extends Activity {
+public class TestPicActivity extends Activity{
 	// ArrayList<Entity> dataList;//用来装载数据源的列表
 	List<ImageBucket> dataList;
 	GridView gridView;
@@ -29,10 +28,8 @@ public class TestPicActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_image_bucket);
-
 		helper = AlbumHelper.getHelper();
 		helper.init(getApplicationContext());
-
 		initData();
 		initView();
 	}
@@ -40,7 +37,7 @@ public class TestPicActivity extends Activity {
 	/**
 	 * 初始化数据
 	 */
-	private void initData() {
+	protected void initData() {
 		// /**
 		// * 这里，我们假设已经从网络或者本地解析好了数据，所以直接在这里模拟了10个实体类，直接装进列表中
 		// */
@@ -58,7 +55,7 @@ public class TestPicActivity extends Activity {
 	/**
 	 * 初始化view视图
 	 */
-	private void initView() {
+	protected void initView() {
 		gridView = (GridView) findViewById(R.id.gridview);
 		adapter = new ImageBucketAdapter(TestPicActivity.this, dataList);
 		gridView.setAdapter(adapter);

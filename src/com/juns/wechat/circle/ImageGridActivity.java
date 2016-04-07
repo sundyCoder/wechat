@@ -1,12 +1,12 @@
-package com.chen.friends.circle;
+package com.juns.wechat.circle;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import com.chen.friends.circle.ImageGridAdapter.TextCallback;
 import com.juns.wechat.R;
+import com.juns.wechat.circle.ImageGridAdapter.TextCallback;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -73,7 +73,7 @@ public class ImageGridActivity extends Activity {
 
 				if (Bimp.act_bool) {
 					Intent intent = new Intent(ImageGridActivity.this,
-							PublishImages.class);
+							PublishedActivity.class);
 					startActivity(intent);
 					Bimp.act_bool = false;
 				}

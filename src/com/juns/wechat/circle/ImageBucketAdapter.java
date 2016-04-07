@@ -1,4 +1,4 @@
-package com.chen.friends.circle;
+package com.juns.wechat.circle;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.chen.friends.circle.BitmapCache.ImageCallback;
 import com.juns.wechat.R;
+import com.juns.wechat.circle.BitmapCache.ImageCallback;
 
 public class ImageBucketAdapter extends BaseAdapter {
 	final String TAG = getClass().getSimpleName();

@@ -10,7 +10,21 @@
         android:layout_height="60dp"
         android:background="#ff495a" >
 
+           <TextView
+            android:id="@+id/cancel_send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/text_while"
+            android:textSize="20sp" />
+        
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -29,6 +43,8 @@
             android:text="发送"
             android:textColor="@drawable/text_while"
             android:textSize="20sp" />
+
+
     </RelativeLayout>
 
     <EditText
