@@ -1,10 +1,10 @@
 package com.juns.wechat.moments;
 
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
@@ -31,9 +31,14 @@ import com.juns.wechat.moments.mvp.view.ICircleView;
 import com.juns.wechat.moments.utils.CommonUtils;
 import com.juns.wechat.moments.utils.DatasUtil;
 import com.juns.wechat.moments.widgets.CommentListView;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.juns.wechat.R;
 import com.juns.wechat.moments.adapter.CircleAdapter;
-
+import java.io.File;
 import java.util.List;
 /**
  * 
@@ -42,9 +47,13 @@ import java.util.List;
 * @author yiw
 * @date 2015-12-28 下午4:21:18 
 *
- */
-public class MomentsActivity extends Activity implements OnRefreshListener, ICircleView{
+*/
 
+public class MomentsActivity extends Activity implements OnRefreshListener, ICircleView{
+	// 默认存放图片的路径
+    public final static String DEFAULT_SAVE_IMAGE_PATH = Environment.getExternalStorageDirectory() + File.separator + "CircleDemo" + File.separator + "Images"
+					+ File.separator;
+	
 	protected static final String TAG = MomentsActivity.class.getSimpleName();
 	private ListView mCircleLv;
 	private SwipeRefreshLayout mSwipeRefreshLayout;
@@ -66,6 +75,7 @@ public class MomentsActivity extends Activity implements OnRefreshListener, ICir
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+//		initImageLoader(); //load image
 		mPresenter = new CirclePresenter(this);
 		initView();
 		loadData();
@@ -328,4 +338,22 @@ public class MomentsActivity extends Activity implements OnRefreshListener, ICir
 		}
 	}
 
+	/** 初始化imageLoader */
+	private void initImageLoader() {
+		DisplayImageOptions options = new DisplayImageOptions.Builder().showImageForEmptyUri(R.color.bg_no_photo)
+				.showImageOnFail(R.color.bg_no_photo).showImageOnLoading(R.color.bg_no_photo).cacheInMemory(true)
+				.cacheOnDisk(true).build();
+
+		File cacheDir = new File(DEFAULT_SAVE_IMAGE_PATH);
+		ImageLoaderConfiguration imageconfig = new ImageLoaderConfiguration.Builder(this)
+				.threadPriority(Thread.NORM_PRIORITY - 2)
+				.denyCacheImageMultipleSizesInMemory()
+				.diskCacheSize(50 * 1024 * 1024)
+				.diskCacheFileCount(200)
+				.diskCache(new UnlimitedDiskCache(cacheDir))
+				.diskCacheFileNameGenerator(new Md5FileNameGenerator())
+				.defaultDisplayImageOptions(options).build();
+
+		ImageLoader.getInstance().init(imageconfig);
+	}
 }

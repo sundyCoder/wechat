@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.juns.wechat.MainActivity;
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
 import com.juns.wechat.moments.MomentsActivity;
@@ -79,18 +78,18 @@ public class PublishedActivity extends Activity {
 		activity_selectimg_send.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-//				Utils.start_Activity(PublishedActivity.this, MomentsActivity.class);
-				List<String> list = new ArrayList<String>();				
-				for (int i = 0; i < Bimp.drr.size(); i++) {
-					String Str = Bimp.drr.get(i).substring( 
-							Bimp.drr.get(i).lastIndexOf("/") + 1,
-							Bimp.drr.get(i).lastIndexOf("."));
-					list.add(FileUtils.SDPATH+Str+".JPEG");				
-				}
-				// 高清的压缩图片全部就在  list 路径里面了
-				// 高清的压缩过的 bmp 对象  都在 Bimp.bmp里面
-				// 完成上传服务器后 .........
-				FileUtils.deleteDir();
+				Utils.start_Activity(PublishedActivity.this, MomentsActivity.class);
+//				List<String> list = new ArrayList<String>();				
+//				for (int i = 0; i < Bimp.drr.size(); i++) {
+//					String Str = Bimp.drr.get(i).substring( 
+//							Bimp.drr.get(i).lastIndexOf("/") + 1,
+//							Bimp.drr.get(i).lastIndexOf("."));
+//					list.add(FileUtils.SDPATH+Str+".JPEG");				
+//				}
+//				// 高清的压缩图片全部就在  list 路径里面了
+//				// 高清的压缩过的 bmp 对象  都在 Bimp.bmp里面
+//				// 完成上传服务器后 .........
+//				FileUtils.deleteDir();
 			}
 		});
 		activity_cancel_send = (TextView) findViewById(R.id.cancel_send);

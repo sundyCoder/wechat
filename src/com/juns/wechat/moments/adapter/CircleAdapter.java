@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
+import com.juns.wechat.App;
 import com.juns.wechat.R;
 import com.juns.wechat.moments.ImagePagerActivity;
-import com.juns.wechat.moments.MyApplication;
 import com.juns.wechat.moments.bean.ActionItem;
 import com.juns.wechat.moments.bean.CircleItem;
 import com.juns.wechat.moments.bean.CommentConfig;
@@ -205,7 +205,7 @@ public class CircleAdapter extends BaseAdapter {
 					public void onClick(int position) {
 						String userName = favortDatas.get(position).getUser().getName();
 						String userId = favortDatas.get(position).getUser().getId();
-						Toast.makeText(MyApplication.getContext(), userName + " &id = " + userId, Toast.LENGTH_SHORT).show();
+						Toast.makeText(App.getInstance(), userName + " &id = " + userId, Toast.LENGTH_SHORT).show();
 					}
 				});
 				holder.favortListAdapter.setDatas(favortDatas);

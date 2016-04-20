@@ -3,7 +3,7 @@ package com.juns.wechat.moments.spannable;
 import android.text.SpannableString;
 import android.widget.Toast;
 
-import com.juns.wechat.moments.MyApplication;
+import com.juns.wechat.App;
 
 /**
  *
@@ -24,6 +24,6 @@ public class NameClickListener implements ISpanClick {
 
     @Override
     public void onClick(int position) {
-        Toast.makeText(MyApplication.getContext(), userName + " &id = " + userId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(App.getInstance(), userName + " &id = " + userId, Toast.LENGTH_SHORT).show();
     }
 }

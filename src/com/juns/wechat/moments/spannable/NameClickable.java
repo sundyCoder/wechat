@@ -4,8 +4,8 @@ import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
+import com.juns.wechat.App;
 import com.juns.wechat.R;
-import com.juns.wechat.moments.MyApplication;
 
 /**
  * @author yiw
@@ -30,7 +30,7 @@ public class NameClickable extends ClickableSpan implements View.OnClickListener
     public void updateDrawState(TextPaint ds) {
         super.updateDrawState(ds);
 
-        int colorValue = MyApplication.getContext().getResources().getColor(
+        int colorValue = App.getInstance().getResources().getColor(
                 R.color.color_8290AF);
         ds.setColor(colorValue);
         ds.setUnderlineText(false);

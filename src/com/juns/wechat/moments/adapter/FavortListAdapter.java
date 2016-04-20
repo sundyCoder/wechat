@@ -8,8 +8,8 @@ import android.text.SpannableStringBuilder;
 import android.text.style.DynamicDrawableSpan;
 import android.text.style.ImageSpan;
 
+import com.juns.wechat.App;
 import com.juns.wechat.R;
-import com.juns.wechat.moments.MyApplication;
 import com.juns.wechat.moments.bean.FavortItem;
 import com.juns.wechat.moments.spannable.CircleMovementMethod;
 import com.juns.wechat.moments.spannable.NameClickable;
@@ -97,7 +97,7 @@ public class FavortListAdapter {
     private SpannableString setImageSpan(){
         String text = "  ";
         SpannableString imgSpanText = new SpannableString(text);
-        imgSpanText.setSpan(new ImageSpan(MyApplication.getContext(), R.drawable.im_ic_dig_tips, DynamicDrawableSpan.ALIGN_BASELINE),
+        imgSpanText.setSpan(new ImageSpan(App.getInstance(), R.drawable.im_ic_dig_tips, DynamicDrawableSpan.ALIGN_BASELINE),
                 0 , 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return imgSpanText;
     }

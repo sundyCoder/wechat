@@ -10,8 +10,8 @@ import android.text.style.ClickableSpan;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
+import com.juns.wechat.App;
 import com.juns.wechat.R;
-import com.juns.wechat.moments.MyApplication;
 
 /**
  * @author yiw
@@ -78,7 +78,7 @@ public class CircleMovementMethod extends BaseMovementMethod {
                         buffer.getSpanStart(mClickLinks[0]),
                         buffer.getSpanEnd(mClickLinks[0]));
                 //设置点击区域的背景色
-                mBgSpan = new BackgroundColorSpan(MyApplication.getContext().getResources().getColor(mClickableSpanBgClorId));
+                mBgSpan = new BackgroundColorSpan(App.getInstance().getResources().getColor(mClickableSpanBgClorId));
                 buffer.setSpan(mBgSpan,
                         buffer.getSpanStart(mClickLinks[0]),
                         buffer.getSpanEnd(mClickLinks[0]),
