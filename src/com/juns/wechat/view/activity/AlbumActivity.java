@@ -13,9 +13,9 @@ import com.juns.wechat.adpter.AlbumAdpter;
 import com.juns.wechat.circle.PublishedActivity;
 import com.juns.wechat.circle.TestPicActivity;
 import com.juns.wechat.common.Utils;
+import com.juns.wechat.moments.adapter.CircleAdapter;
+import com.juns.wechat.moments.mvp.presenter.CirclePresenter;
 import com.juns.wechat.view.BaseActivity;
-import com.yiw.circledemo.adapter.CircleAdapter;
-import com.yiw.circledemo.mvp.presenter.CirclePresenter;
 
 //朋友圈
 public class AlbumActivity extends BaseActivity implements OnClickListener {

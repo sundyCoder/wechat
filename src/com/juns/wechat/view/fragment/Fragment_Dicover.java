@@ -11,9 +11,9 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import com.juns.wechat.Constants;
-import com.yiw.circledemo.MomentsActivity;
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
+import com.juns.wechat.moments.MomentsActivity;
 import com.juns.wechat.view.activity.AlbumActivity;
 import com.juns.wechat.view.activity.LoginActivity;
 import com.juns.wechat.view.activity.PublicActivity;

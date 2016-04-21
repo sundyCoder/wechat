@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
-import com.yiw.circledemo.MomentsActivity;
+import com.juns.wechat.moments.MomentsActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

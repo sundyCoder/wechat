@@ -173,12 +173,12 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="com.yiw.circledemo.MomentsActivity"
+            android:name="com.juns.wechat.moments.MomentsActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
             <!-- android:theme="@android:style/Theme.Black.NoTitleBar" > -->
         </activity> -->
         <activity
-            android:name="com.yiw.circledemo.ImagePagerActivity"
+            android:name="com.juns.wechat.moments.ImagePagerActivity"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
         </activity>

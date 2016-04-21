@@ -11,7 +11,7 @@
         android:layout_margin="10dp"
         android:orientation="horizontal" >
 
-        <com.yiw.circledemo.widgets.CircularImage
+        <com.juns.wechat.moments.widgets.CircularImage
             android:id="@+id/headIv"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -115,7 +115,7 @@
                 android:background="@drawable/im_distribute_comm_bg"
                 android:orientation="vertical" >
 
-                <com.yiw.circledemo.widgets.FavortListView
+                <com.juns.wechat.moments.widgets.FavortListView
                     android:id="@+id/favortListTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                     android:layout_marginTop="5dip"
                     android:layout_marginBottom="5dip"
                     />
-                <com.yiw.circledemo.widgets.CommentListView
+                <com.juns.wechat.moments.widgets.CommentListView
                     android:id="@+id/commentList"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
