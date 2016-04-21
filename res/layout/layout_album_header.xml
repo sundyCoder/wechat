@@ -20,7 +20,6 @@
 			android:paddingBottom="10dp"
 			android:background="@drawable/user_ba"
 			android:layout_width="fill_parent"
-			android:textColor="@color/white"
 			android:layout_height="240dp" />
 		<ImageView
 			android:id="@+id/head"

@@ -117,7 +117,7 @@ public class MomentsActivity extends Activity implements OnRefreshListener, ICir
 		ImageLoader.getInstance().init(imageconfig);
 	}
 
-//	@SuppressLint({ "ClickableViewAccessibility", "InlinedApi" })
+	@SuppressLint({ "ClickableViewAccessibility", "InlinedApi" })
 	protected void initView() {
 //		findViewById(R.id.img_back).setVisibility(View.VISIBLE);
 //		txt_title = (TextView) findViewById(R.id.txt_title);
@@ -145,8 +145,7 @@ public class MomentsActivity extends Activity implements OnRefreshListener, ICir
 		mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
 				android.R.color.holo_orange_light, android.R.color.holo_red_light);
 
-		layout_head = getLayoutInflater().inflate(R.layout.layout_album_header,
-				null);
+		layout_head = getLayoutInflater().inflate(R.layout.layout_album_header,null);
 		mCircleLv.addHeaderView(layout_head);
 		
 		mAdapter = new CircleAdapter(this);

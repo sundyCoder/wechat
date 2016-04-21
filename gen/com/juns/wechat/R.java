@@ -660,6 +660,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int action_bar=0x7f0a0001;
+        public static final int action_settings=0x7f0a0152;
         public static final int actionbar_title=0x7f0a0002;
         public static final int activity_selectimg_send=0x7f0a007a;
         public static final int alert_message=0x7f0a00b4;
