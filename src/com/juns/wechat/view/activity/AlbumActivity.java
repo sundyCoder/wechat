@@ -14,6 +14,8 @@ import com.juns.wechat.circle.PublishedActivity;
 import com.juns.wechat.circle.TestPicActivity;
 import com.juns.wechat.common.Utils;
 import com.juns.wechat.view.BaseActivity;
+import com.yiw.circledemo.adapter.CircleAdapter;
+import com.yiw.circledemo.mvp.presenter.CirclePresenter;
 
 //朋友圈
 public class AlbumActivity extends BaseActivity implements OnClickListener {
@@ -21,6 +23,11 @@ public class AlbumActivity extends BaseActivity implements OnClickListener {
 	private ImageView img_talk;
 	private ListView mlistview;
 	private View layout_head;
+	
+	private CircleAdapter mAdapter;
+	private CirclePresenter mPresenter;
+	
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +58,10 @@ public class AlbumActivity extends BaseActivity implements OnClickListener {
 		layout_head = getLayoutInflater().inflate(R.layout.layout_album_header,
 				null);
 		mlistview.addHeaderView(layout_head);
+//		mAdapter = new CircleAdapter(this);
+//		mAdapter.setCirclePresenter(mPresenter);
+//		mlistview.setAdapter(new CircleAdapter(this));
+		
 		mlistview.setAdapter(new AlbumAdpter(this)); //静态的显示朋友圈的内容
 	}
 

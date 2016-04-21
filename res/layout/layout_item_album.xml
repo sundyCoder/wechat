@@ -12,7 +12,6 @@
 		android:background="@color/white"
 		android:padding="10dip" >
 		 
-	 
 		<ImageView
 			android:id="@+id/img_head"
 			android:layout_width="50.0dip"

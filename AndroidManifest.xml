@@ -172,13 +172,12 @@
             android:name=".circle.PhotoActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
-        
-         <activity
-            android:name=".moments.MomentsActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
-        </activity> 
         <activity
-            android:name=".moments.ImagePagerActivity"
+            android:name="com.yiw.circledemo.MomentsActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity> -->
+        <activity
+            android:name="com.yiw.circledemo.ImagePagerActivity"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
         </activity>

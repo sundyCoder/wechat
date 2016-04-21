@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import com.juns.wechat.Constants;
+import com.yiw.circledemo.MomentsActivity;
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
 import com.juns.wechat.view.activity.AlbumActivity;
@@ -68,7 +69,8 @@ public class Fragment_Dicover extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.txt_pengyouquan:// 朋友圈
-			Utils.start_Activity(getActivity(), AlbumActivity.class);
+//			Utils.start_Activity(getActivity(), MomentsActivity.class); //MomentsActivity  AlbumActivity
+			Utils.start_Activity(getActivity(), AlbumActivity.class); //MomentsActivity  AlbumActivity
 			break;
 		case R.id.txt_saoyisao:// 扫一扫
 			Utils.start_Activity(getActivity(), CaptureActivity.class);

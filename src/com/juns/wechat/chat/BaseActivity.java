@@ -32,7 +32,7 @@ public class BaseActivity extends FragmentActivity {
 	protected void onResume() {
 		super.onResume();
 		// onresume时，取消notification显示
-		EMChatManager.getInstance().activityResumed();
+		EMChatManager.getInstance().activityResumed();   //sundy
 		// umeng
 	}
 

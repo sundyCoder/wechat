@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.juns.wechat.R;
 import com.juns.wechat.common.Utils;
-import com.juns.wechat.moments.MomentsActivity;
+import com.yiw.circledemo.MomentsActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -24,6 +24,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -76,8 +77,7 @@ public class PublishedActivity extends Activity {
 		});
 		activity_selectimg_send = (TextView) findViewById(R.id.activity_selectimg_send);
 		activity_selectimg_send.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
+		public void onClick(View v) {
 				Utils.start_Activity(PublishedActivity.this, MomentsActivity.class);
 //				List<String> list = new ArrayList<String>();				
 //				for (int i = 0; i < Bimp.drr.size(); i++) {
@@ -86,9 +86,12 @@ public class PublishedActivity extends Activity {
 //							Bimp.drr.get(i).lastIndexOf("."));
 //					list.add(FileUtils.SDPATH+Str+".JPEG");				
 //				}
-//				// 高清的压缩图片全部就在  list 路径里面了
-//				// 高清的压缩过的 bmp 对象  都在 Bimp.bmp里面
-//				// 完成上传服务器后 .........
+//				
+//				System.out.println("sundy:"+list);
+//				System.out.println("bmp:"+Bimp.bmp);
+				// 高清的压缩图片全部就在  list 路径里面了
+				// 高清的压缩过的 bmp 对象  都在 Bimp.bmp里面
+				// 完成上传服务器后 .........
 //				FileUtils.deleteDir();
 			}
 		});

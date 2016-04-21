@@ -10,13 +10,10 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.juns.wechat.MainActivity;
 import com.juns.wechat.R;
-import com.juns.wechat.circle.PublishedActivity;
 import com.juns.wechat.common.Utils;
 import com.juns.wechat.view.BaseActivity;
 
